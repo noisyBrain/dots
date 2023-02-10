@@ -37,7 +37,7 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    # prompt_char           # prompt symbol
+    prompt_char             # prompt symbol
   )
 
   # The list of segments shown on the right. Fill it with less important segments.
@@ -126,7 +126,7 @@
   #
   # You can also override it for a specific segment:
   #
-  #   POWERLEVEL9K_STATUS_ICON_BEFORE_CONTENT=false
+    # POWERLEVEL9K_STATUS_ICON_BEFORE_CONTENT=false
   #
   # Or for a specific segment in specific state:
   #
@@ -138,7 +138,7 @@
 
   # Connect left prompt lines with these symbols. You'll probably want to use the same color
   # as POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND below.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%240F╭─' #original
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%240F╭─%015F\uE0C7'
   typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX='%240F├─'
   typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%240F╰─'
 
@@ -166,23 +166,22 @@
 
   # Default background color.
   # typeset -g POWERLEVEL9K_BACKGROUND=236 #original
-  typeset -g POWERLEVEL9K_BACKGROUND=233 #custom
+  typeset -g POWERLEVEL9K_BACKGROUND=015 #custom
 
   # Separator between same-color segments on the left.
   # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%244F\uE0B1' --original
-  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%003F\uE0B1' # custom
+  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%015F\uE0C6' # custom
   # Separator between same-color segments on the right.
   typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%244F\uE0B3'
   # Separator between different-color segments on the left.
   # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0B0' #original
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='%244F\uE0B0' #original
+  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='%015F\uE0C6 ' #custom
   # Separator between different-color segments on the right.
   typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0B2'
   # The right end of left prompt.
-  # typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%166F\uE0C0' #fire tail
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%234F\uE0C4'
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%053F\uE0C6'
   # The left end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B2'
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0C7'
   # The left end of left prompt.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
   # The right end of right prompt.
@@ -194,8 +193,9 @@
   # OS identifier color.
   # typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255 --original
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=230 #mod
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=015
   # Custom icon.
-  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='喝'
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -223,8 +223,8 @@
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
   # typeset -g POWERLEVEL9K_DIR_FOREGROUND=31
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=003
-  # typeset -g POWERLEVEL9K_DIR_BACKGROUND=000
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=233
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=053
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -235,7 +235,7 @@
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
   # typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=39
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=003
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=000
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -502,7 +502,6 @@
   # typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # Custom prefix.
   # typeset -g POWERLEVEL9K_VCS_PREFIX='%246Fon '
-
   # Show status of repositories of these types. You can add svn and/or hg if you are
   # using them. If you do, your prompt may become slow even when your current directory
   # isn't in an svn or hg reposotiry.
@@ -512,7 +511,7 @@
   # Powerlevel10k has to fall back to using vcs_info.
   typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=76
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=76
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=178
+  typeset -g POWERLEVEL9K_VCS_BACKGROUND=015
 
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
@@ -1590,7 +1589,8 @@
 
   ####################################[ time: current time ]####################################
   # Current time color.
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND=66
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=224
+  typeset -g POWERLEVEL9K_TIME_BACKGROUND=091
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
   # If set to true, time will update when you hit enter. This way prompts for the past

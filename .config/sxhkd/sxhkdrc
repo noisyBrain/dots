@@ -8,7 +8,11 @@ super + Return
 
 # program launcher
 super + d
-	/bin/bash /home/malvaloca/.config/rofi/scripts/launcher_t6
+	/bin/bash /home/malvaloca/.config/rofi/scripts/launcher_t1
+
+# program finder
+alt + Tab
+  /bin/bash /home/malvaloca/.config/rofi/scripts/launcher_t2
 
 # make sxhkd reload its configuration files:
 super + Escape

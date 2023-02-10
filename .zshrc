@@ -123,7 +123,7 @@ alias vi='nvim'
 alias cpa='copypath'
 alias wbs='websearch'
 alias cf='copyfile'
-alias reload='source .zshrc'
+alias reload='source ~/.zshrc'
 
 # Systemctl
 alias off='systemctl poweroff'
@@ -169,8 +169,13 @@ alias fullbr='brightnessctl s 100%'
 alias uyay='yay -Syu --aur'
 alias upac='sudo pacman -Syu'
 
-#Git
+# Git
 alias config='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
+
+# Projects
+alias iter='cd ~/Tomi/iteration/backend'
+alias back='cd ~/Tomi/BackEnd'
+alias turnos='cd ~/Tomi/turnos_online/backend'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
