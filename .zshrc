@@ -141,14 +141,15 @@ alias lz='lazygit'
 # Configs
 alias nconf='vi ~/.config/nvim'
 alias pconf='vi ~/.config/polybar'
-alias piconf='vi ~/.config/picom'
 alias bconf='vi ~/.config/bspwm'
 alias sconf='vi ~/.config/sxhkd/sxhkdrc'
 alias kconf='vi ~/.config/kitty/kitty.conf'
-alias zconf='vi .zshrc'
+alias zconf='vi ~/.zshrc'
+alias piconf='vi ~/.config/picom'
 
 # Wifi
 alias wifi='nmcli device wifi connect '
+# connect to new wifi -> wifi &ssid& password 'wifi password'
 
 # Temperatures
 alias disktemp='sudo smartctl -A /dev/nvme0n1p1 | grep Celsius'
@@ -176,6 +177,8 @@ alias config='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
 alias iter='cd ~/Tomi/iteration/backend'
 alias back='cd ~/Tomi/BackEnd'
 alias turnos='cd ~/Tomi/turnos_online/backend'
+
+bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
