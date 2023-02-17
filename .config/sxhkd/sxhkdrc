@@ -8,11 +8,11 @@ super + Return
 
 # program launcher
 super + d
-	/bin/bash /home/malvaloca/.config/rofi/scripts/launcher_t1
+	/bin/bash $HOME/.config/rofi/scripts/launcher_t1
 
 # program finder
 alt + Tab
-  /bin/bash /home/malvaloca/.config/rofi/scripts/launcher_t2
+  /bin/bash $HOME/.config/rofi/scripts/launcher_t2
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -21,6 +21,13 @@ super + Escape
 # RSS tuifeed
 alt + t
   tuifeed
+
+# Fzf
+alt + a
+	alacritty -e $SHELL -lc 'bash $HOME/.config/scripts/fuzzy.sh'
+
+ctrl + p
+	alacritty -e $SHELL -lc 'bash $HOME/.config/scripts/change_dir.sh'
 
 #
 # bspwm hotkeys
