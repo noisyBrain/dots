@@ -77,7 +77,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting sudo web-search copypath copyfile)
+plugins=(git zsh-syntax-highlighting sudo web-search copypath copyfile web-search)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
@@ -121,7 +121,7 @@ alias vi='nvim'
 
 # ZSH plugins alias
 alias cpa='copypath'
-alias wbs='websearch'
+alias wbs='web-search'
 alias cf='copyfile'
 alias reload='source ~/.zshrc'
 
@@ -177,6 +177,7 @@ alias config='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
 alias iter='cd ~/Tomi/iteration/backend'
 alias back='cd ~/Tomi/BackEnd'
 alias turnos='cd ~/Tomi/turnos_online/backend'
+alias norg='vi $(fd . | grep "neorg" | fzf --prompt=" open... ❯ " -m --height=50% --reverse --marker=" " --border=rounded --pointer="" --header="Select note")'
 
 bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 
