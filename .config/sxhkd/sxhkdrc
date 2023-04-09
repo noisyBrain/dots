@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	wezterm
 
 # program launcher
 super + d
@@ -16,7 +16,7 @@ alt + Tab
 
 # Launch calcure
 alt + c
-	alacritty -e $SHELL -lc 'calcure'
+	wezterm -e $SHELL -lc 'calcure'
   
 
 # make sxhkd reload its configuration files:
@@ -29,10 +29,10 @@ alt + t
 
 # Fzf
 alt + a
-	alacritty -e $SHELL -lc 'bash $HOME/.config/scripts/fuzzy.sh'
+	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/fuzzy.sh'
 
 ctrl + p
-	alacritty -e $SHELL -lc 'bash $HOME/.config/scripts/change_dir.sh'
+	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/change_dir.sh'
 
 #
 # bspwm hotkeys

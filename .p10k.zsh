@@ -138,7 +138,7 @@
 
   # Connect left prompt lines with these symbols. You'll probably want to use the same color
   # as POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_FOREGROUND below.
-  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%240F╭─%015F\uE0C7'
+  typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%240F╭─%015F'
   typeset -g POWERLEVEL9K_MULTILINE_NEWLINE_PROMPT_PREFIX='%240F├─'
   typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%240F╰─'
 
@@ -166,22 +166,22 @@
 
   # Default background color.
   # typeset -g POWERLEVEL9K_BACKGROUND=236 #original
-  typeset -g POWERLEVEL9K_BACKGROUND=015 #custom
+  typeset -g POWERLEVEL9K_BACKGROUND=053 #custom
 
   # Separator between same-color segments on the left.
-  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%244F\uE0B1' --original
-  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%015F\uE0C6' # custom
+  # typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%244F\uE0B1' #--original
+  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%015F\uE0B4' # custom
   # Separator between same-color segments on the right.
   typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%244F\uE0B3'
   # Separator between different-color segments on the left.
   # typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0B0' #original
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='%015F\uE0C6 ' #custom
+  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='%053K%000F\uE0B4' #custom
   # Separator between different-color segments on the right.
   typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0B2'
   # The right end of left prompt.
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%053F\uE0C6'
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%053F\uE0B4'
   # The left end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0C7'
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
   # The left end of left prompt.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
   # The right end of right prompt.
@@ -193,9 +193,9 @@
   # OS identifier color.
   # typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255 --original
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=230 #mod
-  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=015
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=000
   # Custom icon.
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -511,7 +511,7 @@
   # Powerlevel10k has to fall back to using vcs_info.
   typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=76
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=76
-  typeset -g POWERLEVEL9K_VCS_BACKGROUND=015
+  typeset -g POWERLEVEL9K_VCS_BACKGROUND=000
 
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
@@ -527,7 +527,7 @@
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=70
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=000
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
