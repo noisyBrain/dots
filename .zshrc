@@ -146,9 +146,11 @@ alias sconf='vi ~/.config/sxhkd/sxhkdrc'
 alias kconf='vi ~/.config/kitty/kitty.conf'
 alias zconf='vi ~/.zshrc'
 alias piconf='vi ~/.config/picom'
+alias wconf='vi ~/.config/wezterm'
 
 # Wifi
 alias wifi='nmcli device wifi connect '
+alias listwifi='nmcli dev wifi list'
 # connect to new wifi -> wifi &ssid& password 'wifi password'
 
 # Temperatures
@@ -177,7 +179,9 @@ alias config='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
 alias iter='cd ~/Tomi/iteration/backend'
 alias back='cd ~/Tomi/BackEnd'
 alias turnos='cd ~/Tomi/turnos_online/backend'
+alias ipi='vi ~/Tomi/IPI'
 alias norg='vi $(fd . | grep "neorg" | fzf --prompt=" open... ❯ " -m --height=50% --reverse --marker=" " --border=rounded --pointer="" --header="Select note")'
+alias dolar='~/Tomi/dolar_cli/main.py'
 
 bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 

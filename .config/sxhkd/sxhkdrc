@@ -31,7 +31,7 @@ alt + t
 alt + a
 	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/fuzzy.sh'
 
-ctrl + p
+ctrl + s
 	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/change_dir.sh'
 
 #
