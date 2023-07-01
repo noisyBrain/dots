@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/.loca/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -182,6 +183,14 @@ alias turnos='cd ~/Tomi/turnos_online/backend'
 alias ipi='vi ~/Tomi/IPI'
 alias norg='vi $(fd . | grep "neorg" | fzf --prompt=" open... ❯ " -m --height=50% --reverse --marker=" " --border=rounded --pointer="" --header="Select note")'
 alias dolar='~/Tomi/dolar_cli/main.py'
+
+# Node
+alias prs='pnpm start'
+alias prb='pnpm run build'
+alias prbdd='pnpm run bdd'
+alias prd='pnpm run dev'
+alias eslint='pnpm run eslint'
+alias prt='pnpm run test'
 
 bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 
