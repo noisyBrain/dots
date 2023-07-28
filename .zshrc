@@ -168,6 +168,7 @@ alias minbr='brightnessctl -n'
 alias lessbr='brightnessctl s 50%'
 alias morebr='brightnessctl s 80%'
 alias fullbr='brightnessctl s 100%'
+alias nosuspend='xdg-screensaver suspend'
 
 # Update
 alias uyay='yay -Syu --aur'
@@ -188,9 +189,10 @@ alias dolar='~/Tomi/dolar_cli/main.py'
 alias prs='pnpm start'
 alias prb='pnpm run build'
 alias prbdd='pnpm run bdd'
-alias prd='pnpm run dev'
+alias prd='pnpm run start:dev'
 alias eslint='pnpm run eslint'
 alias prt='pnpm run test'
+alias upc='docker exec -it matchdesire-back-db-1 bash'
 
 bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 
