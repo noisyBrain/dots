@@ -151,6 +151,7 @@ alias wconf='vi ~/.config/wezterm'
 
 # Wifi
 alias wifi='nmcli device wifi connect '
+alias wifip='nmcli device wifi connect password '
 alias listwifi='nmcli dev wifi list'
 # connect to new wifi -> wifi &ssid& password 'wifi password'
 
@@ -168,7 +169,7 @@ alias minbr='brightnessctl -n'
 alias lessbr='brightnessctl s 50%'
 alias morebr='brightnessctl s 80%'
 alias fullbr='brightnessctl s 100%'
-alias nosuspend='xdg-screensaver suspend'
+alias nosuspend='xprop | awk "/window id # of group leader:/ { print \$NF }" | xargs -I{} xdg-screensaver suspend {}'
 
 # Update
 alias uyay='yay -Syu --aur'
@@ -179,11 +180,14 @@ alias config='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
 
 # Projects
 alias iter='cd ~/Tomi/iteration/backend'
-alias back='cd ~/Tomi/BackEnd'
+alias back='cd ~/Tomi/BackEnd && vi .'
 alias turnos='cd ~/Tomi/turnos_online/backend'
 alias ipi='vi ~/Tomi/IPI'
 alias norg='vi $(fd . | grep "neorg" | fzf --prompt=" open... ❯ " -m --height=50% --reverse --marker=" " --border=rounded --pointer="" --header="Select note")'
 alias dolar='~/Tomi/dolar_cli/main.py'
+alias videos='~/Desktop/Videos/OBS/'
+alias mback='~/Tomi/matchdesire-back'
+alias omback='~/Tomi/matchdesire-back && vi .'
 
 # Node
 alias prs='pnpm start'
@@ -199,3 +203,10 @@ bindkey "^[a" $HOME/.config/scripts/fuzzy.sh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# bun completions
+[ -s "/home/malvaloca/.bun/_bun" ] && source "/home/malvaloca/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
