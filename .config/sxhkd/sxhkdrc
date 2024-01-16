@@ -32,7 +32,7 @@ alt + a
 	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/fuzzy.sh'
 
 ctrl + s
-	wezterm -e $SHELL -lc 'bash $HOME/.config/scripts/change_dir.sh'
+	bash $HOME/.config/scripts/screenshoot.sh
 
 #
 # bspwm hotkeys
